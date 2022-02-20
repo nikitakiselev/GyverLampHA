@@ -8,7 +8,7 @@
 [2]: https://alexgyver.ru/gyverlamp/
 [3]: https://alexgyver.ru/about_gyver/
 
-Компонент работает со стандартной прошивкой лампы. Текущее состояние лампы **опрашивается раз в 30 секунд**, поэтому, после старта Home Assistant, она будет пол минуты выключена.
+Компонент работает с прошивкой 87² эффектов в 1 (gunner47 v.2) (https://community.alexgyver.ru/threads/wifi-lampa-budilnik-obsuzhdenie-proshivki-ot-gunner47.2418/page-72#post-33652). Мой форк на котором настраивал я - https://github.com/nikitakiselev/gunner47_v2. Текущее состояние лампы **опрашивается раз в 30 секунд**, поэтому, после старта Home Assistant, она будет пол минуты выключена.
 
 Поддерживается:
 
@@ -25,9 +25,9 @@
 
 **Способ 1.** [HACS](https://hacs.xyz/)
 
-> HACS > Интеграции > 3 точки (правый верхний угол) > Пользовательские репозитории > URL: `AlexxIT/GyverLamp`, Категория: Интеграция > Добавить > подождать > GyverLamp > Установить
+> HACS > Интеграции > 3 точки (правый верхний угол) > Пользовательские репозитории > URL: `nikitakiselev/GyverLampHA`, Категория: Интеграция > Добавить > подождать > GyverLamp > Установить
 
-**Способ 2.** Вручную скопируйте папку `gyverlamp` из [latest release](https://github.com/AlexxIT/GyverLamp/releases/latest) в директорию `/config/custom_components`.
+**Способ 2.** Вручную скопируйте папку `gyverlamp` из [latest release](https://github.com/nikitakiselev/GyverLampHA/releases/latest) в директорию `/config/custom_components`.
 
 ## Настройка
 
@@ -45,7 +45,7 @@
 light gyverlamp:
 - platform: gyverlamp
   host: 192.168.1.123
-  name: Лампа Гайвера
+  name: GyverLamp
   effects:
   - Конфетти
   - Огонь
